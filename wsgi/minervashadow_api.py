@@ -8,12 +8,12 @@ def hello():
     return 'Hello World!'
 
 
-@app.route('/ugly/')
+@app.route('/ugly')
 def uglyfy():
 	return 'Ugly.'
 
 
-@app.route('/pretty/')
+@app.route('/pretty')
 def uglyfy():
 	return 'Pretty.'
 
