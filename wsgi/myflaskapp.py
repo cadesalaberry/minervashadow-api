@@ -1,6 +1,8 @@
-import flask_json
+from flask_auth import requires_auth
+from flask_json import make_json_app
 
-app = flask_json.make_json_app(__name__)
+
+app = make_json_app(__name__)
 
 @app.route("/")
 def hello():
@@ -8,6 +10,7 @@ def hello():
 
 
 @app.route('/ugly')
+@requires_auth
 def uglify():
 	return 'Ugly.'
 
