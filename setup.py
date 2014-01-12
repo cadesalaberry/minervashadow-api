@@ -17,6 +17,6 @@ setup(
 	url='https://github.com/cadesalaberry/minervashadow-api',
 	author='cadesalaberry',
 	author_email='cadesalaberry@yahoo.com',
-	install_requires=dependencies,
+	install_requires=dependencies
 )
 
