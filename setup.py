@@ -3,7 +3,7 @@ try:
 except:
 	from disutils.core import setup
 
-import minervashadow_api
+import version
 
 
 dependencies = ['Flask>=0.7.2', 'MarkupSafe']
@@ -11,8 +11,8 @@ dependencies = ['Flask>=0.7.2', 'MarkupSafe']
 setup(
 
 	name='minervashadow_api',
-	version=minervashadow_api.get_version(),
-	description='OpenShift App to make the minervashadow_api available to the public',
+	version=version.get_version(),
+	description='OpenShift App to make the minervashadow-api available to the public',
 	long_description=open('README.md').read(),
 	url='https://github.com/cadesalaberry/minervashadow-api',
 	author='cadesalaberry',
@@ -27,3 +27,4 @@ setup(
 		'Programming Language :: Python :: 2.6',
 	}
 )
+
