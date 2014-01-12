@@ -18,13 +18,5 @@ setup(
 	author='cadesalaberry',
 	author_email='cadesalaberry@yahoo.com',
 	install_requires=dependencies,
-	classifiers={
-		'License :: OSI Approved :: MIT License',
-		'NaturalLanguage :: English',
-		'Development Status :: 1 - Alpha',
-		'Programming Language :: Python',
-		'Intended Audience :: Developers',
-		'Programming Language :: Python :: 2.6',
-	}
 )
 
