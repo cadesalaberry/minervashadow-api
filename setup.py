@@ -19,11 +19,11 @@ setup(
 	author_email='cadesalaberry@yahoo.com',
 	install_requires=dependencies,
 	classifiers={
-		'Development Status :: 1 - Alpha',
-		'Intended Audience :: Developers',
-		'NaturalLanguage :: English',
 		'License :: OSI Approved :: MIT License',
+		'NaturalLanguage :: English',
+		'Development Status :: 1 - Alpha',
 		'Programming Language :: Python',
+		'Intended Audience :: Developers',
 		'Programming Language :: Python :: 2.6',
 	}
 )
