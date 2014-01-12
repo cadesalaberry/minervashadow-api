@@ -1,10 +1,21 @@
-from setuptools import setup
+try:
+	from setuptools import setup 
+except:
+	from disutils.core import setup
 
-setup(name='YourAppName',
-      version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
-      url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['Flask>=0.7.2', 'MarkupSafe'],
-     )
+import version
+
+
+dependencies = ['Flask>=0.7.2', 'MarkupSafe']
+
+setup(
+
+	name='minervashadow_api',
+	version=version.get_version(),
+	description='OpenShift App to make the minervashadow-api available to the public',
+	long_description=open('README.md').read(),
+	url='https://github.com/cadesalaberry/minervashadow-api',
+	author='cadesalaberry',
+	author_email='cadesalaberry@yahoo.com',
+	install_requires=dependencies
+)
