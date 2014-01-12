@@ -1,6 +1,6 @@
-from flask import Flask
+import flask_json
 
-app = Flask(__name__)
+app = flask_json.make_json_app(__name__)
 
 @app.route("/")
 def hello():
@@ -8,7 +8,7 @@ def hello():
 
 
 @app.route('/ugly')
-def uglyfy():
+def uglify():
 	return 'Ugly.'
 
 
