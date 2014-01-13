@@ -15,6 +15,12 @@ def uglify():
 	return 'Ugly.'
 
 
+@app.route('/transcript')
+@requires_auth
+def transcript(auth):
+	return str(auth)
+
+
 if __name__ == "__main__":
     app.run()
 

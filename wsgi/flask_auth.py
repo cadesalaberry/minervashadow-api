@@ -14,7 +14,7 @@ def authenticate():
 	return Response(
 	'Could not verify your access level for that URL.\n'
 	'You have to login with proper credentials', 401,
-	{'WWW-Authenticate': 'Basic realm="Login Required"'})
+	{'WWW-Authenticate': 'Basic realm="Please enter your Minerva credentials"'})
 
 
 def requires_auth(f):
@@ -23,5 +23,5 @@ def requires_auth(f):
 		auth = request.authorization
 		if not auth or not check_auth(auth.username, auth.password):
 			return authenticate()
-		return f(*args, **kwargs)
+		return f(auth, *args, **kwargs)
 	return decorated
