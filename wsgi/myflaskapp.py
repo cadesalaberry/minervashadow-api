@@ -18,6 +18,12 @@ def uglify():
 @app.route('/transcript')
 @requires_auth
 def transcript(auth):
+	return '{ "hello" : "told ya" }'
+
+
+@app.route('/auth')
+@requires_auth
+def auth(auth):
 	return str(auth)
 
 
