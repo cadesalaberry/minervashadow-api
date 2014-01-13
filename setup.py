@@ -6,7 +6,7 @@ except:
 import version
 
 
-dependencies = ['Flask>=0.7.2', 'MarkupSafe']
+dependencies = ['Flask>=0.7.2', 'MarkupSafe', 'minervashadow']
 
 setup(
 
@@ -17,5 +17,14 @@ setup(
 	url='https://github.com/cadesalaberry/minervashadow-api',
 	author='cadesalaberry',
 	author_email='cadesalaberry@yahoo.com',
-	install_requires=dependencies
+	install_requires=dependencies,
+	classifiers=[
+		'Development Status :: 3 - Alpha',
+		'Intended Audience :: Developers',
+		'Natural Language :: French',
+		'License :: OSI Approved :: MIT License',
+		'Programming Language :: Python',
+		'Programming Language :: Python :: 2.7',
+		'Framework :: Flask'
+	]
 )
