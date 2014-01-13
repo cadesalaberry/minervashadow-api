@@ -9,12 +9,6 @@ def hello():
     return "Hello World!"
 
 
-@app.route('/ugly')
-@requires_auth
-def uglify():
-	return 'Ugly.'
-
-
 @app.route('/transcript')
 @requires_auth
 def transcript(auth):
@@ -24,7 +18,7 @@ def transcript(auth):
 @app.route('/auth')
 @requires_auth
 def auth(auth):
-	return str(auth)
+	return auth.username
 
 
 if __name__ == "__main__":
