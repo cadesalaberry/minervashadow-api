@@ -8,7 +8,10 @@ import version
 
 dependencies = ['Flask>=0.7.2', 'MarkupSafe', 'minervashadow']
 
-dependency_links = ['https://pypi.python.org/pypi/minervashadow']
+dependency_links = [
+'https://pypi.python.org/pypi/minervashadow',
+'https://github.com/cadesalaberry/minervashadow'
+]
 
 setup(
 
