@@ -12,7 +12,7 @@ def index():
 @app.route('/transcript')
 @requires_auth
 def transcript(auth):
-	hello = 'told ya'
+	hello = {'hello' :'told ya'}
 	return jsonify(**hello)
 
 
