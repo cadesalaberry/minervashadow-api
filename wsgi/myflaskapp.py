@@ -1,6 +1,6 @@
 from flask_auth import requires_auth
 from flask_json import make_json_app
-
+from flask import jsonify
 
 app = make_json_app(__name__)
 
@@ -12,7 +12,8 @@ def index():
 @app.route('/transcript')
 @requires_auth
 def transcript(auth):
-	return '{ "hello" : "told ya" }'
+	hello = 'told ya'
+	return jsonify(hello)
 
 
 @app.route('/auth')
