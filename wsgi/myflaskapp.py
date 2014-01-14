@@ -13,7 +13,7 @@ def index():
 @requires_auth
 def transcript(auth):
 	hello = 'told ya'
-	return jsonify(hello)
+	return jsonify(**hello)
 
 
 @app.route('/auth')
