@@ -1,0 +1,3 @@
+[submodule "libs/minervashadow"]
+	path = libs/minervashadow
+	url = https://github.com/cadesalaberry/minervashadow.git
