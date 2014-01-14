@@ -10,8 +10,8 @@ dependencies = ['Flask>=0.7.2', 'MarkupSafe', 'minervashadow']
 
 dependency_links = [
 'https://pypi.python.org/pypi/minervashadow',
-'https://github.com/cadesalaberry/minervashadow'
-'git+https://github.com/cadesalaberry/minervashadow.git'
+'https://github.com/cadesalaberry/minervashadow',
+'git+https://github.com/cadesalaberry/minervashadow.git',
 'https://github.com/cadesalaberry/minervashadow/tarball/master#egg=minervashadow-0.0.3a1'
 ]
 
