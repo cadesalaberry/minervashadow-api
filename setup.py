@@ -11,13 +11,14 @@ dependencies = ['Flask>=0.7.2', 'MarkupSafe', 'minervashadow']
 dependency_links = [
 'https://pypi.python.org/pypi/minervashadow',
 'https://github.com/cadesalaberry/minervashadow'
+'https://api.github.com/repos/cadesalaberry/minervashadow/tarball'
 ]
 
 setup(
 
 	name='minervashadow_api',
 	version=version.get_version(),
-	description='OpenShift App to make the minervashadow-api available to the public',
+	description='A JSON API to the aging minerva website.',
 	long_description=open('README.md').read(),
 	url='https://github.com/cadesalaberry/minervashadow-api',
 	author='cadesalaberry',
