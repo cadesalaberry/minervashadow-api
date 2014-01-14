@@ -12,7 +12,7 @@ dependency_links = [
 'https://pypi.python.org/pypi/minervashadow',
 'https://github.com/cadesalaberry/minervashadow'
 'git+https://github.com/cadesalaberry/minervashadow.git'
-'https://api.github.com/repos/cadesalaberry/minervashadow/tarball/master#egg=minervashadow-0.0.3a1'
+'https://github.com/cadesalaberry/minervashadow/tarball/master#egg=minervashadow-0.0.3a1'
 ]
 
 setup(
