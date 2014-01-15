@@ -1,8 +1,6 @@
 from flask.ext.httpauth import HTTPBasicAuth
-from minervashadow import minerva 
 from flask import jsonify, request
 
-import minervashadow
 import flask_json
 import shadow
 

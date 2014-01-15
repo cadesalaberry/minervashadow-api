@@ -1,4 +1,3 @@
-
 from minervashadow import minerva
 from functools import wraps
 from flask import request
@@ -28,4 +27,3 @@ def get_transcript():
 	_json = _curriculum.json()
 
 	return json.loads(_json)
-	
