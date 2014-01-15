@@ -28,3 +28,4 @@ def get_transcript():
 	_json = _curriculum.json()
 
 	return json.loads(_json)
+	
