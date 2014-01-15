@@ -1,7 +1,7 @@
 
-from flask import request, Response
 from minervashadow import minerva
 from functools import wraps
+from flask import request
 
 import json
 
