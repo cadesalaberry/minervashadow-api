@@ -6,7 +6,7 @@ except:
 import version
 
 
-dependencies = ['Flask>=0.7.2', 'flask-httpauth', 'MarkupSafe', 'minervashadow']
+dependencies = ['Flask>=0.7.2', 'flask_httpauth', 'MarkupSafe', 'minervashadow']
 
 dependency_links = [
 'https://github.com/cadesalaberry/minervashadow/tarball/master#egg=minervashadow-0.0.3a1'
