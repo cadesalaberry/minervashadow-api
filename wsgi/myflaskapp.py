@@ -1,27 +1,50 @@
-from flask_auth import requires_auth
-from flask_json import make_json_app
-from flask import jsonify
+from flask.ext.httpauth import HTTPBasicAuth
+from minervashadow import minerva 
+from flask import jsonify, request
 
-app = make_json_app(__name__)
+import minervashadow
+import flask_json
+import shadow
 
-@app.route("/")
+
+app = flask_json.make_json_app(__name__)
+auth = HTTPBasicAuth()
+
+
+@app.route('/')
 def index():
-    return app.send_static_file('index.html')
+	return app.send_static_file('index.html')
+
+
+@app.route('/logout')
+@auth.login_required
+def logout():
+	return jsonify(message='Logged out?')
 
 
 @app.route('/transcript')
-@requires_auth
-def transcript(auth):
-	hello = {'hello' :'told ya'}
-	return jsonify(**hello)
+@auth.login_required
+def transcript():
+	
+	return jsonify(shadow.get_transcript())
 
 
-@app.route('/auth')
-@requires_auth
-def auth(auth):
-	return auth.username
+@app.route('/cookie')
+@auth.login_required
+def cookie():
+	_cred = request.authorization
+	return jsonify(username=_cred.username)
+
+
+@auth.verify_password
+def verify_password(username, password):
+	"""
+	This functiontries to login to check if a username /
+	password combination is valid.
+	"""
+	return shadow.login_ok(username, password)
 
 
 if __name__ == "__main__":
-    app.run()
+	app.run()
 
