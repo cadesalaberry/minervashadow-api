@@ -19,6 +19,22 @@
     <!-- Bootstrap core CSS -->
     <link href="./static/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+      body {
+        background: #F2F2F2;
+      }
+      .course {
+        display: inline-block;
+      }
+      .inlineGrade {
+        display: inline-block;
+        float: right;
+      }
+      .course-class {
+        background: #E6E6E6;
+        box-shadow: 0 1p 2px rgba(0,0,0,0.2);
+      }
+    </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -72,19 +88,17 @@
             <h3>{{semester}} {{year}}</h3>
 
             {{#each courses}}
-            <div class="col-md-8">
+            <div class="col-md-12 course-class">
+              <div class="course">
+                <h4>{{subject}}</h4>
+                <p class="title">{{title}}</p>
+              </div>
 
-              <table><tr>
-                <td>
-                  <h4>{{subject}}</h4>
-                  <p class="title">{{title}}</p>
-                </td>
-                <td>
-                  <h1 class="grade">{{grade}}</h1>
-                </td>
-              </tr></table>
-
-            </div>{{/each}}
+              <div class="inlineGrade">
+                <h1 class="grade">{{grade}}</p>
+              </div>
+            </div>
+            {{/each}}
 
           </div>{{/each}}
         </div>
