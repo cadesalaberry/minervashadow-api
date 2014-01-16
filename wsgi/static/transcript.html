@@ -66,24 +66,27 @@
       <div class="row">
         <div class="col-md-12">
 
-          {{#each semesters}}
-            
-            <div class="col-md-4">
-            <h2>{{year}}</h2>
-            <h3>{{semester}}</h3>
+          {{#each semesters}}     
+          <div class="col-md-4">
+
+            <h3>{{semester}} {{year}}</h3>
 
             {{#each courses}}
+            <div class="col-md-8">
 
-              <div class="col-md-8"><h4>{{subject}}</h4>
-                <p class="title">{{title}}</p>
-              </div>
+              <table><tr>
+                <td>
+                  <h4>{{subject}}</h4>
+                  <p class="title">{{title}}</p>
+                </td>
+                <td>
+                  <h1 class="grade">{{grade}}</h1>
+                </td>
+              </tr></table>
 
-              <div class="col-md-4"><p class="grade">{{grade}}</p></div>
+            </div>{{/each}}
 
-            {{/each}}
-            </div>
-
-          {{/each}}
+          </div>{{/each}}
         </div>
       </div>
 
