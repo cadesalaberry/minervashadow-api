@@ -1,4 +1,4 @@
-from wsgi import myflaskapp
+import myflaskapp
 
 application = myflaskapp.app
 
