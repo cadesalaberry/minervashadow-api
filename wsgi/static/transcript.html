@@ -23,16 +23,18 @@
       body {
         background: #F2F2F2;
       }
-      .course {
+      .semester-div {
+      }
+      .course-div {
+        box-shadow: 0 1p 2px rgba(0,0,0,0.2);
+        background: #E6E6E6;
+      }
+      .course-div-info {
         display: inline-block;
       }
-      .inlineGrade {
+      .course-div-grade {
         display: inline-block;
         float: right;
-      }
-      .course-class {
-        background: #E6E6E6;
-        box-shadow: 0 1p 2px rgba(0,0,0,0.2);
       }
     </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -83,18 +85,18 @@
         <div class="col-md-12">
 
           {{#each semesters}}     
-          <div class="col-md-4">
+          <div class="semester-div col-md-4">
 
             <h3>{{semester}} {{year}}</h3>
 
             {{#each courses}}
-            <div class="col-md-12 course-class">
-              <div class="course">
+            <div class="course-div col-md-12">
+              <div class="course-div-info">
                 <h4>{{subject}}</h4>
                 <p class="title">{{title}}</p>
               </div>
 
-              <div class="inlineGrade">
+              <div class="course-div-grade">
                 <h1 class="grade">{{grade}}</p>
               </div>
             </div>
