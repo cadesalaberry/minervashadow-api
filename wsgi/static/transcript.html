@@ -58,103 +58,51 @@
 
     <!-- Page content of course! -->
     <div class="container">
+        <div id="placeholder"></div>
+    </div>
+
+
+    <script id="semester-template" type="text/x-handlebars-template">
       <div class="row">
+        <div class="col-md-12">
 
-        <div class="col-md-12"><h2>2010</h2>
-          
-          <div class="col-md-4"><h3>Winter</h3>
+          {{#each semesters}}
+            <h2>{{year}}</h2>
             
-            <div class="col-md-8"><h4>COMP 202</h4>
-              <p class="title">Introduction to Computing</p>
+            <div class="col-md-4"><h3>{{semester}}</h3>
+
+            {{#each courses}}
+
+              <div class="col-md-8"><h4>{{subject}}</h4>
+                <p class="title">{{title}}</p>
+              </div>
+
+              <div class="col-md-4"><p class="grade">{{grade}}</p></div>
+
+            {{/each}}
             </div>
 
-            <div class="col-md-4"><p class="grade">F</p></div>
-
-            <div class="col-md-8"><h4>ECSE 200</h4>
-              <p class="title">Electric Circuits 1</p>
-            </div>
-
-            <div class="col-md-4"><p class="grade">F</p></div>
-
-            <div class="col-md-8"><h4>MATH 133</h4>
-              <p class="title">Linear Algebra and Geometry</p>
-            </div>
-
-            <div class="col-md-4"><p class="grade">F</p></div>
-
-            <div class="col-md-8"><h4>MATH 262</h4>
-              <p class="title">Intermediate Calculus</p>
-            </div>
-            
-            <div class="col-md-4"><p class="grade">F</p></div>
-
-            <div class="col-md-8"><h4>MATH 263</h4>
-              <p class="title">ODEs for Engineers</p>
-            </div>
-
-            <div class="col-md-4"><p class="grade">F</p></div>
-          </div>
-
-          <div class="col-md-4"><h3>Summer</h3>
-            
-            <div class="col-md-6"><h4>COMP 202</h4>
-              <p class="title">Introduction to Computing</p>
-            </div>
-
-            <div class="col-md-6"><h4>ECSE 200</h4>
-              <p class="title">Electric Circuits 1</p>
-            </div>
-          
-          </div>
-
-          <div class="col-md-4"><h3>Fall</h3>
-            
-            <div class="col-md-6"><h4>COMP 202</h4>
-              <p class="title">Introduction to Computing</p>
-            </div>
-
-            <div class="col-md-6"><h4>ECSE 200</h4>
-              <p class="title">Electric Circuits 1</p>
-            </div>
-          
-          </div>
-
+          {{/each}}
         </div>
-        
-        <div class="col-md-12"><h2>2011</h2>
-          
-          <div class="col-md-6"><h3>Winter</h3>
-            
-            <div class="col-md-3"><h4>COMP 202</h4>
-              <p class="col-md-2">Introduction to Computing</p>
-            </div>
+      </div>
 
-            <div class="col-md-3"><h4>ECSE 210</h4>
-              <p class="title">Electric Circuits 1</p>
-            </div>
-          
-          </div>
-          
-          <div class="col-md-6"><h3>Fall</h3>
-            
-            <div class="col-md-3"><h4>COMP 202</h4>
-              <p class="title">Introduction to Computing</p>
-            </div>
-
-            <div class="col-md-3"><h4>ECSE 200</h4>
-              <p class="title">Electric Circuits 1</p>
-            </div>
-          
-          </div>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/handlebars.js"></script>
+    <script>
+
+      var source   = $("#semester-template").html();
+      var template = Handlebars.compile(source);
+
+      $.getJSON("./api/transcript", function(data){
+        var html    = template(data);
+        $("#placeholder").html(html);
+      });
+    </script>
   </body>
 </html>
