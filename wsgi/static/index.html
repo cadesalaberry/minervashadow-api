@@ -24,6 +24,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
+    <style>
+      body {
+        background: #F2F2F2;
+      }
+    </style>
   </head>
 
 
@@ -61,7 +66,35 @@
       <div class="row">
         <div class="col-md-6">
           <h1>minervashadow</h1>
-          <p class="lead">Rethinking the interface of the aging minerva website.</p>
+          <h3 class="lead">Rethinking the interface of the aging minerva website.</h3>
+          <p class="introduction-text">
+            It gathers all the most used links from minerva into one sleek and mobile enabled interface.
+            To do so it uses a RESTful JSON API located 
+            <a class="link" href="https://shadow-c4labz.rhcloud.com/api/transcript">
+              <span>here</span>
+            </a>
+            .
+          </p>
+          <h4 class="question-text">
+            Is it your transcript ?
+          </h4>
+          <p class="answer-text">
+            No but I would love it to be...
+          </p>
+          <h4 class="question-text">
+            Can I use it to see my transcript ?
+          </h4>
+          <p class="answer-text">
+            Can I have your McGill account password ? For obvious security reasons I do not want to have this website be something more than a demo yet.
+            However if more people get interested in the project, I will certainly ask for a security audit from McGill, and/or integrate with their login system. 
+          </p>
+          <h4 class="question-text">
+            What technology did you use ?
+          </h4>
+          <p class="answer-text">
+            The project has been entirely developed in Python 2.7 (for compatibility), using <b>docopt</b> for the cli, <b>mechanize</b> as a headless browser,
+            <b>beautifoulsoup4</b> for the html parser, and <b>Flask</b> as the webserver.
+          </p>
         </div>
         <div class="col-md-5">
           <img src="./static/img/shadow-logo-nodropshadow.png" class="img-responsive" alt="minervashadow-logo">
@@ -75,5 +108,15 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./static/js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46518403-2', 'shadow-c4labz.rhcloud.com');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
