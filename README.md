@@ -38,3 +38,7 @@ To read more about logging in Flask please see this email
 
 http://flask.pocoo.org/mailinglist/archive/2012/1/27/catching-exceptions-from-flask/
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cadesalaberry/minervashadow-api/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
